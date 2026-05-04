@@ -133,7 +133,7 @@ def parse_arguments() -> argparse.Namespace:
 
 def demo(args: argparse.Namespace):
     """Run diffusion renderer inference.
-    
+
     Args:
         args: Command line arguments
     """
@@ -187,7 +187,7 @@ def demo(args: argparse.Namespace):
                 data_batch=data_batch,
                 normalize_normal=(gbuffer_pass == 'normal' and args.normalize_normal),
             )
-            
+
             # Save output as individual frames
             if args.save_image:
                 video_relative_base_name = data_batch['clip_name'][0]
@@ -218,4 +218,4 @@ def demo(args: argparse.Namespace):
 
 if __name__ == "__main__":
     args = parse_arguments()
-    demo(args) 
+    demo(args)

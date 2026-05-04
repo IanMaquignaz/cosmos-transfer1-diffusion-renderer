@@ -1,0 +1,26 @@
+services:
+
+  COSMOS:
+    image: cosmos:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: cosmos
+    container_name: cosmos
+    privileged: true
+    stdin_open: true
+    tty: true
+    shm_size: '8gb'
+    volumes:
+      - ..:/workspace
+      - /home-local2/iamaq.extra.nobkp/logs/cosmos:/workspace/logs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              # count: 1
+              device_ids: ['0', '1']
+              capabilities: [gpu]
+    ports:
+      - "7860:7860"

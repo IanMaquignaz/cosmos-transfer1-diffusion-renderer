@@ -51,7 +51,7 @@ class DiffusionRendererPipeline(DiffusionText2WorldGenerationPipeline):
         seed: int = 1000,
     ):
         """Initialize the diffusion renderer pipeline.
-        
+
         Args:
             is_inverse: If True, uses the Inverse renderer (rgb -> other maps)
                       If False, uses the Forward renderer (maps -> rgb)
@@ -181,5 +181,3 @@ class DiffusionRendererPipeline(DiffusionText2WorldGenerationPipeline):
 
         log.info("Finish generation")
         return video
-
-
