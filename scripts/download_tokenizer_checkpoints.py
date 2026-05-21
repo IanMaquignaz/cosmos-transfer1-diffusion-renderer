@@ -20,7 +20,7 @@ from pathlib import Path
 
 from huggingface_hub import snapshot_download
 
-from scripts.download_guardrail_checkpoints import download_guardrail_checkpoints
+from download_guardrail_checkpoints import download_guardrail_checkpoints
 
 
 def parse_args() -> argparse.Namespace:

@@ -1,0 +1,4 @@
+retinaface-py==0.0.2
+iopath==0.1.10
+better-profanity==0.7.0
+megatron-core>=0.10.0
